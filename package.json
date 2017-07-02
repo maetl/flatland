@@ -3,6 +3,10 @@
   "version": "0.1.0",
   "description": "Toolkit for representing two dimensional spaces.",
   "main": "lib/index.js",
+  "files": [
+    "lib",
+    "src"
+  ],
   "scripts": {
     "build": "babel src --out-dir lib",
     "prepublish": "npm run build"
