@@ -1,0 +1,21 @@
+{
+  "name": "flatland",
+  "version": "0.1.0",
+  "description": "Toolkit for representing two dimensional spaces.",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel src --out-dir lib",
+    "prepublish": "npm run build"
+  },
+  "author": "Mark Rickerby",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-env": "^1.5.2"
+  },
+  "babel": {
+    "presets": [
+      "env"
+    ]
+  }
+}
