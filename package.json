@@ -1,6 +1,6 @@
 {
   "name": "flatland",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Toolkit for representing two dimensional spaces.",
   "main": "lib/index.js",
   "files": [
