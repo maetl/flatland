@@ -8,18 +8,22 @@
     "src"
   ],
   "scripts": {
+    "test": "ava test",
     "build": "babel src --out-dir lib",
-    "prepublish": "npm run build"
+    "prepublishOnly": "npm run build"
   },
   "author": "Mark Rickerby",
   "license": "MIT",
   "devDependencies": {
-    "babel-cli": "^6.24.1",
-    "babel-preset-env": "^1.5.2"
+    "@babel/register": "^7.0.0-beta.42",
+    "ava": "^1.0.0-beta.3"
   },
+  "ava": {
+		"require": [
+			"@babel/register"
+		]
+	},
   "babel": {
-    "presets": [
-      "env"
-    ]
+    "presets": ["@ava/stage-4"]
   }
 }
