@@ -1,4 +1,26 @@
-export default function line(from, to) {
+import { chebyshevDistance } from "./distance";
+
+export function interpolateLine(from, to) {
+  const points = [];
+  const distance = chebyshevDistance(from, to);
+
+  for (let step=0; step <= distance; step++) {
+    const t = (distance == 0) ? 0.0 : step / distance;
+    const point = lerpPoint(from, to, t);
+    points.push({x: Math.round(point.x), y: Math.round(point.y)});
+  }
+
+  return points;
+}
+
+function lerpPoint(start, end, t) {
+  return {
+    x: start.x + t * (end.x-start.x),
+    y: start.y + t * (end.y-start.y)
+  }
+}
+
+export function plotLine(from, to) {
   let { x: x0, y: y0 } = from;
   let { x: x1, y: y1 } = to;
 
