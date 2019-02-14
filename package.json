@@ -1,31 +1,29 @@
 {
   "name": "flatland",
   "version": "0.3.0",
-  "description": "Toolkit for representing two dimensional spaces.",
-  "main": "lib/index.js",
-  "files": [
-    "lib",
-    "src"
-  ],
-  "scripts": {
-    "test": "ava test",
-    "build": "babel src --out-dir lib",
-    "prepublishOnly": "npm run build"
-  },
   "author": "Mark Rickerby",
   "license": "MIT",
-  "devDependencies": {
-    "@babel/register": "^7.0.0-beta.42",
-    "ava": "^1.0.0-beta.3"
+  "description": "Toolkit for representing two dimensional spaces.",
+  "scripts": {
+    "test": "ava test",
+    "build": "rollup -c"
   },
+  "devDependencies": {
+    "ava": "^0.25.0",
+    "esm": "^3.0.84",
+    "rollup": "^0.66.2"
+  },
+  "main": "index.js",
+  "module": "src/index.js",
+  "browser": "flatland.js",
+  "files": [
+    "flatland.js",
+    "index.js",
+    "src"
+  ],
   "ava": {
     "require": [
-      "@babel/register"
-    ]
-  },
-  "babel": {
-    "presets": [
-      "@ava/stage-4"
+      "esm"
     ]
   }
 }
