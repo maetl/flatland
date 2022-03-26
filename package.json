@@ -1,29 +1,30 @@
 {
   "name": "flatland",
-  "version": "0.4.0",
+  "version": "0.5.0",
   "author": "Mark Rickerby",
   "license": "MIT",
   "description": "Toolkit for representing two dimensional spaces.",
   "scripts": {
-    "test": "ava test",
-    "build": "rollup -c"
+    "prepublish": "npm run build",
+    "build": "rollup -c",
+    "test": "ava --verbose"
   },
   "devDependencies": {
-    "ava": "^0.25.0",
-    "esm": "^3.0.84",
-    "rollup": "^0.66.2"
+    "@rollup/plugin-json": "^4.1.0",
+    "ava": "^4.1.0",
+    "rollup": "^2.70.1",
+    "rollup-plugin-terser": "^7.0.2"
   },
-  "main": "index.js",
   "module": "src/index.js",
-  "browser": "flatland.js",
+  "main": "flatland.bundle.cjs",
+  "browser": "src/index.js",
+  "type": "module",
+  "sideEffects": false,
   "files": [
-    "flatland.js",
-    "index.js",
-    "src"
-  ],
-  "ava": {
-    "require": [
-      "esm"
-    ]
-  }
+    "src",
+    "README.md",
+    "LICENSE",
+    "flatland.bundle.cjs",
+    "flatland.min.js"
+  ]
 }

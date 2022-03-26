@@ -1,24 +1,23 @@
-import pkg from './package.json';
+import json from "@rollup/plugin-json";
+import { terser } from "rollup-plugin-terser";
+import pkg from "./package.json";
 
 export default [
 	{
-		input: 'src/index.js',
-		output: {
-      name: 'flatland',
-			file: pkg.browser,
-			format: 'iife'
-		}
-	},
-	{
-		input: 'src/index.js',
+		input: "bundle.config.js",
 		output: [
-			{ file: pkg.main, format: 'cjs' }
-		]
-	},
-	{
-		input: 'src/algorithms.js',
-		output: [
-			{ file: "algorithms.js", format: 'cjs' }
-		]
+			{
+	      name: "flatland",
+				file: pkg.main,
+				format: "cjs"
+			},
+			{
+				name: "flatland",
+				file: "flatland.min.js",
+				format: "iife",
+				plugins: [terser()]
+			}
+		],
+		plugins: [json()]
 	}
 ];
