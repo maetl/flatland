@@ -1,4 +1,4 @@
-import { chebyshevDistance } from "./distance";
+import { chebyshevDistance } from "./distance.js";
 
 export function interpolateLine(from, to) {
   const points = [];
