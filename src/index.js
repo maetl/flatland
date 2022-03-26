@@ -1,9 +1,3 @@
-import distance from './distance'
-import line from './line'
-import point from './point'
-
-export {
-  distance,
-  line,
-  point
-}
+export * as distance from "./distance.js";
+export * as line from "./line.js";
+export * as point from "./point.js";
