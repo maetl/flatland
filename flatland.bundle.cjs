@@ -109,7 +109,7 @@ var point = /*#__PURE__*/Object.freeze({
   'default': Point
 });
 
-var version = "0.5.0";
+var version = "0.5.1";
 
 exports.distance = distance;
 exports.line = line;
