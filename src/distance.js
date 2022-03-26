@@ -11,3 +11,11 @@ export function manhattanDistance(start, end) {
 export function chebyshevDistance(start, end) {
   return Math.max(Math.abs(end.x - start.x), Math.abs(end.y - start.y));
 }
+
+export function minkowskiDistance(start, end, p) {
+  return Math.pow(
+    Math.pow(Math.abs(start.x - end.x), p) +
+      Math.pow(Math.abs(start.y - end.y), p),
+    1 / p
+  );
+}
