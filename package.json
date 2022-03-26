@@ -1,6 +1,6 @@
 {
   "name": "flatland",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "author": "Mark Rickerby",
   "license": "MIT",
   "description": "Toolkit for representing two dimensional spaces.",
